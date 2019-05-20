@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_tab1"
+        android:title="热门" />
+    <item
+        android:icon="@null"
+        android:id="@+id/item_tab2"
+        android:title="关注" />
+    <item
+        android:id="@+id/item_tab3"
+        android:title="当前城市" />
+
+
+
+</menu>

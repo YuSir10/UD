@@ -1,6 +1,7 @@
 package com.example.ud.com.ud.shiping;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -118,6 +119,8 @@ public class VedioFragment_hot extends Fragment {
                 @Override
                 public void onClick(View v) {
                     Toast.makeText(acontext, ""+position, Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getActivity(),VedioPlayActivity.class);
+                    startActivity(intent);
                 }
             });
             viewHolder.mCardViewLeft.setOnClickListener(new View.OnClickListener() {

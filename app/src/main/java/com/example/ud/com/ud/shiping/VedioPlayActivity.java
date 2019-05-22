@@ -55,7 +55,6 @@ public class VedioPlayActivity extends AppCompatActivity {
         imageView = findViewById(R.id.shiping_vedio_img);
         mVideoView = findViewById(R.id.shiping_vedio_play);
         textView = findViewById(R.id.shiping_vedio_tx);
-//        mVideoView.setBackgroundResource(R.drawable.img02);
         final MediaController mediaController = new MediaController(this);
         mVideoView.setMediaController(mediaController);
         mediaController.setMediaPlayer(mVideoView);
@@ -72,7 +71,7 @@ public class VedioPlayActivity extends AppCompatActivity {
                 mediaController.show();
                 imageView.setVisibility(View.INVISIBLE);
                 mVideoView.setFocusable(true);
-                textView.setText("asdfasdfasdfasdf");
+
             }
         });
         mVideoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {

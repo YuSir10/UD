@@ -59,6 +59,14 @@ public class VedioFragment_hot extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(getContext(), mdatas,recyclerView);
         recyclerView.setAdapter(recyclerViewAdapter);
+        recyclerViewAdapter.setOnItemClickListenner(new RecyclerViewAdapter.OnItemClickListenner() {
+            @Override
+            public void onItemClick(int positon) {
+                Toast.makeText(mcontext, "回调方法"+positon, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getContext(), VedioPlayActivity.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 

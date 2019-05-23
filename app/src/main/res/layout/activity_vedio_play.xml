@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".com.ud.shiping.VedioPlayActivity">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -21,7 +21,7 @@
             android:background="@drawable/img04"
             android:layout_width="match_parent"
             android:layout_height="240dp" />
-    </RelativeLayout>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/shiping_vedio_tx"

@@ -61,19 +61,22 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 //            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, getRandHeight());
 //            recyclerViewHodler.linearLayout.setLayoutParams(params);
 //        }
-        if (position % 3 == getRandHeight()) {
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(getImageWidth(), getImageWidth());
-            recyclerViewHodler.linearLayout.setLayoutParams(params);
-        }
-        recyclerViewHodler.mItemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                Toast.makeText(mContext, ""+position, Toast.LENGTH_SHORT).show();
-                if (onItemClickListenner != null) {
-                    onItemClickListenner.onItemClick(position);
-                }
+        if (mRecyclerView.getLayoutManager().getClass() == StaggeredGridLayoutManager.class) {
+            if (position % 3 == getRandHeight()) {
+                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(getImageWidth(), getImageWidth());
+                recyclerViewHodler.linearLayout.setLayoutParams(params);
             }
-        });
+            recyclerViewHodler.mItemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+//                Toast.makeText(mContext, ""+position, Toast.LENGTH_SHORT).show();
+                    if (onItemClickListenner != null) {
+                        onItemClickListenner.onItemClick(position);
+                    }
+                }
+            });
+        }
+
     }
 
     @Override
